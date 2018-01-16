@@ -9,7 +9,7 @@ def calc_dig_2(num):
     singles_2 = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen',
                  'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
     doubles = ['zero', 'ten', 'twenty', 'thirty', 'forty',
-               'fifty', 'sixty', 'seventy', 'eighty', 'ninty']
+               'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 
     num2 = str(num)
 
@@ -22,7 +22,7 @@ def calc_dig_2(num):
         if num < 20:
             return len(singles_2[int(dig_1)])
         elif num % 10 == 0:
-            return len(doubles[int(dig_1)])
+            return len(doubles[int(dig_2)])
         else:
             return len(doubles[int(dig_2)]) + len(singles[int(dig_1)])
 
@@ -43,7 +43,7 @@ def calc_digs(num):
         if num % 100 == 0:
             return len(hundreds[int(dig_3)])
         else:
-			return len(hundreds[int(dig_3)]) + 3 + calc_dig_2(int(num2[1:]))
+            return len(hundreds[int(dig_3)]) + 3 + calc_dig_2(int(num2[1:]))
     else:
         return len('onethousand')
 
